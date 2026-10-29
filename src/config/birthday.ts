@@ -9,6 +9,10 @@ import { BirthdayConfig } from '../types';
  * =======================================================================
  */
 
+// Helper: prefix paths with Vite's base URL for GitHub Pages compatibility
+const base = import.meta.env.BASE_URL;
+const asset = (path: string) => `${base}${path.replace(/^\//, '')}`;
+
 export const BIRTHDAY_CONFIG: BirthdayConfig = {
   // THÔNG TIN NGƯỜI NHẬN
   recipient: {
@@ -63,7 +67,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
   memories: [
     {
       id: "mem-1",
-      url: "/photos/anh1.jpg",
+      url: asset("/photos/anh1.jpg"),
       title: "Khoảnh khắc 1",
       date: "",
       location: "",
@@ -72,7 +76,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
     },
     {
       id: "mem-2",
-      url: "/photos/anh2.jpg",
+      url: asset("/photos/anh2.jpg"),
       title: "Khoảnh khắc 2",
       date: "",
       location: "",
@@ -81,7 +85,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
     },
     {
       id: "mem-3",
-      url: "/photos/anh3.jpg",
+      url: asset("/photos/anh3.jpg"),
       title: "Khoảnh khắc 3",
       date: "",
       location: "",
@@ -90,7 +94,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
     },
     {
       id: "mem-4",
-      url: "/photos/anh4.jpg",
+      url: asset("/photos/anh4.jpg"),
       title: "Khoảnh khắc 4",
       date: "",
       location: "",
@@ -99,7 +103,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
     },
     {
       id: "mem-5",
-      url: "/photos/anh5.jpg",
+      url: asset("/photos/anh5.jpg"),
       title: "Khoảnh khắc 5",
       date: "",
       location: "",
@@ -108,7 +112,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
     },
     {
       id: "mem-6",
-      url: "/photos/anh6.jpg",
+      url: asset("/photos/anh6.jpg"),
       title: "Khoảnh khắc 6",
       date: "",
       location: "",
@@ -117,7 +121,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
     },
     {
       id: "mem-7",
-      url: "/photos/anh7.jpg",
+      url: asset("/photos/anh7.jpg"),
       title: "Khoảnh khắc 7",
       date: "",
       location: "",
@@ -126,7 +130,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
     },
     {
       id: "mem-8",
-      url: "/photos/anh8.jpg",
+      url: asset("/photos/anh8.jpg"),
       title: "Khoảnh khắc 8",
       date: "",
       location: "",
@@ -170,7 +174,7 @@ export const BIRTHDAY_CONFIG: BirthdayConfig = {
   audio: {
     title: "Giai Điệu Ngân Hà Tặng Bé Xu Xinh",
     artist: "Phước Tài & Celestial Stardust Piano",
-    src: "/music/birthday.mp3",
+    src: asset("/music/birthday.mp3"),
     autoPlayAfterGate: true,
     enableFallbackSynthesizer: true,
   }
