@@ -3,10 +3,10 @@ import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
+  base: '/happy-birthday/',
   plugins: [react(), tailwindcss()],
   server: {
     host: true,
     port: 5173,
   },
 });
-
